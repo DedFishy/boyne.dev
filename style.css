@@ -28,6 +28,7 @@ a:hover {
 .cardlinks a {
   background-color: rgb(10, 10, 10);
   border-radius: 3px;
+  margin-top: 4px;
 }
 
 .cardlinks a:hover {
