@@ -25,6 +25,16 @@ a:hover {
 
 /* Style the cards */
 
+.cardlinks a {
+  background-color: rgb(10, 10, 10);
+  border-radius: 3px;
+}
+
+.cardlinks a:hover {
+  color: rgb(20, 20, 20);
+  background-color: rgb(250, 250, 250);
+}
+
 .cardmainlink {
   color: rgb(200, 200, 200);
   font-size: 1.2em;
