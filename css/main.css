@@ -9,9 +9,14 @@ html, body {
   height: 100%;
   background-color: #797979;
   color: white;
+  text-shadow: 2px 2px black;
+  line-height: 1.8em;
 }
 .logo {
   max-width:50%;
+}
+.galpic {
+  max-width:80%;
 }
 .center {
   display: block;
@@ -22,15 +27,14 @@ html, body {
 .top {
     background-image: url(/img/bg.png);
     background-repeat: no-repeat;
-    height: 75%;
-    padding-top: 25%;
+    height: 100%;
     background-position: center;
     background-size: cover;
 }
 .below {
   margin: 10px;
 }
-.featured {
+.featured, .gallery {
   background-color: #474747;
   border-radius: 2px;
   display: flex;
@@ -57,9 +61,11 @@ a {
   text-decoration: none;
   margin-bottom: 10px;
   padding: 2px;
+  padding-top: 3px;
   background-color: black;
   transition: 0.3s;
   display: inline-block;
+  text-shadow: none;
 }
 a:hover {
   color: black;
@@ -68,7 +74,14 @@ a:hover {
   padding: 5px;
   background-color: white;
 }
+a:active {
+  color: white;
+  background-color: black;
+}
 .menu {
   background-color: #474747;
   padding-bottom: 10px;
+}
+.about {
+  color: white;
 }
