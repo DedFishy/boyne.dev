@@ -11,7 +11,10 @@ html, body {
   color: white;
   text-shadow: 2px 2px black;
   line-height: 1.8em;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
+html {overflow-y: hidden;}
 .logo {
   max-width:50%;
 }
