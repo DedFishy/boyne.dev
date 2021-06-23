@@ -2,10 +2,24 @@
   --bg-color: #2D2D2D;
 }
 
+@keyframes loadIn {
+    0% { 
+      opacity: 0;
+      background-color: black;
+      }
+    100% { 
+      opacity: 1;
+      background-color: var(--bg-color);
+      }
+}
+
+/*Animation: animation: 1s ease-out 0s 1 animation;*/
 body {
   font-family: Bahnschrift, sans-serif;
   background-color: var(--bg-color);
   color: white;
+  animation: 1s ease-in 0s 1 loadIn;
+  
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -19,8 +33,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 50%;
   padding: 10px;
 }
-
-.socials, .projects, .project {
+.mainlogo {
+  max-width: 50%;
+}
+.box {
   max-width: 90%;
   border: 2px solid black;
   background-color: rgb(63, 63, 63);
@@ -45,15 +61,13 @@ a {
   border-width: 2px;
   border-bottom-style: solid;
   border-color: white;
-  border-radius: 6px 6px 0 0;
   transition: .3s;
   padding: 6px;
-  margin: 8px;
+  margin: 2px;
   line-height: 2.4em;
 }
 
 a:hover {
-  color: black;
-  background-color: white;
-  border-radius: 6px;
+  padding-bottom: 2px;
+  margin-bottom: 8px;
 }
