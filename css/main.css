@@ -6,10 +6,12 @@
     0% { 
       opacity: 0;
       background-color: black;
+      margin-top: 40px;
       }
     100% { 
       opacity: 1;
       background-color: var(--bg-color);
+      margin-top: 4px;
       }
 }
 
@@ -18,8 +20,13 @@ body {
   font-family: Bahnschrift, sans-serif;
   background-color: var(--bg-color);
   color: white;
-  animation: 1s ease-in 0s 1 loadIn;
+  animation: 0.6s ease-in 0s 1 loadIn;
+  margin-top: 3px;
   
+}
+
+p {
+  white-space: pre-wrap;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -51,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.project {
+.inverted {
   background-color: var(--bg-color);
 }
 
