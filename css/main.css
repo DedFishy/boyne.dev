@@ -71,6 +71,10 @@ a {
   transition: .3s;
   padding: 6px;
   margin: 2px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
   line-height: 2.4em;
 }
 
