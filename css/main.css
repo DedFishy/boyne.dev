@@ -6,12 +6,14 @@
     0% { 
       opacity: 0;
       background-color: #fbff00;
-      margin-top: 100vh;
       }
+  50% {
+    opacity: 0.1;
+    background-color: #fbff00;
+  }
     100% { 
       opacity: 1;
       background-color: var(--bg-color);
-      margin-top: 4px;
       }
 }
 
@@ -19,7 +21,7 @@
 body {
   font-family: Bahnschrift, sans-serif;
   color: white;
-  animation: .4s ease-out 0s 1 loadIn;
+  animation: .8s ease-out 0s 1 loadIn;
   margin-top: 3px;
   background: var(--bg-color);
   overflow-x: hidden;
