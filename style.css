@@ -46,6 +46,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 4px black;
     margin-top: 50px;
+    margin-bottom: 200px;
     padding: 10px;
 }
 
@@ -102,6 +103,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-grow: 1;
 }
 .project-links {
     display: flex;
