@@ -149,3 +149,17 @@ h1 {
 h2 {
     font-size: 5vw;
 }
+
+.certification {
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+    padding: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid white;
+    transition: 0.2s;
+}
+.certification:hover {
+    box-shadow: -4px 4px 0 black;
+}
