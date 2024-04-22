@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>boyne.dev</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+
+        <div id="content">
+
+            <div id="content-inner">
+                <h1>boyne.dev</h1>
+
+                <div id="bio">
+                    I'm Boyne, or DedFishy.
+                    Member of HackClub & FIRST robotics.
+                </div>
+                
+                <div id="socials">
+
+                    <div class="social" onclick="copySocial(this, 'dedfishy')">
+                        <ion-icon name="logo-discord"></ion-icon>
+                        <div class="social-text">
+                            discord
+                        </div>
+                    </div>
+
+                    <div class="social" onclick="openSocial('solo.to/boyne')">
+                        <ion-icon name="link-outline"></ion-icon>
+                        <div class="social-text">
+                            solo.to
+                        </div>
+                    </div>
+
+                    <div class="social" onclick="openSocial('github.com/DedFishy')">
+                        <ion-icon name="logo-github"></ion-icon>
+                        <div class="social-text">
+                            github
+                        </div>
+                    </div>
+
+                    <div class="social" onclick="openSocial('replit.com/@Boyney')">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                        <div class="social-text">
+                            replit
+                        </div>
+                    </div>
+
+                    <div class="social" onclick="openSocial('open.spotify.com/user/j22nobeoowyht006ugwanuf13')">
+                        <ion-icon name="musical-note-outline"></ion-icon>
+                        <div class="social-text">
+                            spotify
+                        </div>
+                    </div>
+
+                    <div class="social" onclick="openSocial('youtube.com/channel/UCzrgV3QwTdwxzYmQHDjI9PQ')">
+                        <ion-icon name="logo-youtube"></ion-icon>
+                        <div class="social-text">
+                            youtube
+                        </div>
+                    </div>
+
+                    <div class="social" onclick="openSocial('twitch.tv/d3df1shy')">
+                        <ion-icon name="logo-twitch"></ion-icon>
+                        <div class="social-text">
+                            twitch
+                        </div>
+                    </div>
+
+                    <div class="social" onclick="openSocial('scratch.mit.edu/users/B-Game-Studios/')">
+                        <ion-icon name="logo-octocat"></ion-icon>
+                        <div class="social-text">
+                            scratch
+                        </div>
+                    </div>
+
+                    <div class="social" onclick="openSocial('codepen.io/SuperBoyne')">
+                        <ion-icon name="logo-codepen"></ion-icon>
+                        <div class="social-text">
+                            codepen
+                        </div>
+                    </div>
+
+                    <div class="social" onclick="copySocial(this, 'boynegregg@gmail.com')">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <div class="social-text">
+                            email
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="languages">
+                    <h2>programming languages</h2>
+                        <h3 class="language">Python</h3>
+                        <h3 class="language">Java</h3>
+                        <h3 class="language">HTML</h3>
+                        <h3 class="language">CSS</h3>
+                        <h3 class="language">JavaScript</h3>
+                        <h3 class="language">SQL</h3>
+                        <h3 class="language">C#</h3>
+                        <h3 class="language">Bash</h3>
+                        <h3 class="language">Batch</h3>
+                        <h3 class="language">Lua</h3>
+                        <h3 class="language">Scratch</h3>
+                </div>
+
+                <div id="certifications">
+                    <h2>certifications</h2>
+                        <a class="certification" href="certifications/java.pdf">Java</a>
+                        <a class="certification" href="certifications/htmlcss.pdf">HTML & CSS</a>
+
+                </div>
+
+                <div id="projects">
+                    <h2>projects</h2>
+
+                    <div class="project">
+                        <img src="projectlogos/recape.png">
+                        <div class="project-description">
+                            <h3>ReCape</h3>
+                            <p>A service that allows you to have custom capes and 3D models in Minecraft with OptiFine.</p>
+                            <div class="project-links">
+                                <a href="https://recape.boyne.dev">website</a>
+                                <a href="https://github.com/ReCape">github</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <img src="projectlogos/spryg.png">
+                        <div class="project-description">
+                            <h3>Spryg</h3>
+                            <p>This is a Python library for the HackClub Sprig that allows you to interface with the hardware using Python.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/DedFishy/Spryg">github</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <img src="projectlogos/godpresenter.png">
+                        <div class="project-description">
+                            <h3>GodPresenter</h3>
+                            <p>A work-in-progress rip-off of ProPresenter for use as a free alternative with a smaller but more focused and friendly feature set.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/DedFishy/GodPresenter">github</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <img src="projectlogos/bismuth.png">
+                        <div class="project-description">
+                            <h3>Bismuth</h3>
+                            <p>A computer desktop that runs in your browser.</p>
+                            <div class="project-links">
+                                <a href="https://bismuth.boyne.dev/">open</a>
+                                <a href="https://replit.com/@Boyney/bismuthOS">replit</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project">
+                        <img src="projectlogos/q.png">
+                        <div class="project-description">
+                            <h3>q</h3>
+                            <p>A Simon-Bop It combination.</p>
+                            <div class="project-links">
+                                <a href="https://codepen.io/SuperBoyne/full/OJBEjPP">open</a>
+                                <a href="https://codepen.io/SuperBoyne/pen/OJBEjPP">codepen</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <img src="projectlogos/daus.png">
+                        <div class="project-description">
+                            <h3>DAUS</h3>
+                            <p>A recreation of MS-DOS.</p>
+                            <div class="project-links">
+                                <a href="https://daus.pythonpower312.repl.co">open</a>
+                                <a href="https://replit.com/@PythonPower312/DAUS">replit</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-description">
+                            <h3>chat.boyne.dev</h3>
+                            <p>A Python-powered online chat room (currently the domain doesn't work right because replit is bullying me).</p>
+                            <div class="project-links">
+                                <a href="https://chatboynedev.boyney.repl.co">open</a>
+                                <a href="https://replit.com/@Boyney/chatboynedev">replit</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <img src="projectlogos/songs.jpg">
+                        <div class="project-description">
+                            <h3>Songs</h3>
+                            <p>A bunch of really weird songs I wrote a while back.</p>
+                            <div class="project-links">
+                                <a href="https://drive.google.com/drive/folders/1v9pNnJ4-xpVzPG2qzXCovDjPXznkRdET?usp=sharing">open</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <script type="text/javascript">
+            function copySocial(event, text) {
+                let target = event.querySelector(".social-text");
+                oldText = target.innerText;
+                navigator.clipboard.writeText(text); 
+                target.innerText = "copied!"
+                setTimeout(e => {
+                    target.innerText = oldText;
+                }, 1000);
+            }
+
+            function openSocial(link) {
+                window.location = "https://" + link;
+            }
+        </script>
+
+    </body>
+
+</html>

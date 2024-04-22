@@ -1,243 +1,138 @@
 <!DOCTYPE html>
 <html>
-
     <head>
-
         <title>boyne.dev</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="style.css">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style.css">
     </head>
-
     <body>
 
-        <div id="content">
+        <div class="page-height">
 
-            <div id="content-inner">
-                <h1>boyne.dev</h1>
+            <h1 id="top">boyne.dev</h1>
 
-                <div id="bio">
-                    I'm Boyne, or DedFishy.
-                    Member of HackClub & FIRST robotics.
-                </div>
+            <div id="top-modal">
                 
-                <div id="socials">
-
-                    <div class="social" onclick="copySocial(this, 'dedfishy')">
-                        <ion-icon name="logo-discord"></ion-icon>
-                        <div class="social-text">
-                            discord
-                        </div>
-                    </div>
-
-                    <div class="social" onclick="openSocial('solo.to/boyne')">
-                        <ion-icon name="link-outline"></ion-icon>
-                        <div class="social-text">
-                            solo.to
-                        </div>
-                    </div>
-
-                    <div class="social" onclick="openSocial('github.com/DedFishy')">
-                        <ion-icon name="logo-github"></ion-icon>
-                        <div class="social-text">
-                            github
-                        </div>
-                    </div>
-
-                    <div class="social" onclick="openSocial('replit.com/@Boyney')">
-                        <ion-icon name="chevron-forward-outline"></ion-icon>
-                        <div class="social-text">
-                            replit
-                        </div>
-                    </div>
-
-                    <div class="social" onclick="openSocial('open.spotify.com/user/j22nobeoowyht006ugwanuf13')">
-                        <ion-icon name="musical-note-outline"></ion-icon>
-                        <div class="social-text">
-                            spotify
-                        </div>
-                    </div>
-
-                    <div class="social" onclick="openSocial('youtube.com/channel/UCzrgV3QwTdwxzYmQHDjI9PQ')">
-                        <ion-icon name="logo-youtube"></ion-icon>
-                        <div class="social-text">
-                            youtube
-                        </div>
-                    </div>
-
-                    <div class="social" onclick="openSocial('twitch.tv/d3df1shy')">
-                        <ion-icon name="logo-twitch"></ion-icon>
-                        <div class="social-text">
-                            twitch
-                        </div>
-                    </div>
-
-                    <div class="social" onclick="openSocial('scratch.mit.edu/users/B-Game-Studios/')">
-                        <ion-icon name="logo-octocat"></ion-icon>
-                        <div class="social-text">
-                            scratch
-                        </div>
-                    </div>
-
-                    <div class="social" onclick="openSocial('codepen.io/SuperBoyne')">
-                        <ion-icon name="logo-codepen"></ion-icon>
-                        <div class="social-text">
-                            codepen
-                        </div>
-                    </div>
-
-                    <div class="social" onclick="copySocial(this, 'boynegregg@gmail.com')">
-                        <ion-icon name="mail-outline"></ion-icon>
-                        <div class="social-text">
-                            email
-                        </div>
-                    </div>
-
+                <div id="sideways-links">
+                    <div><a href="#about-me">about me</a></div>
+                    <div><a href="#skills">skills</a></div>
+                    <div><a href="#projects">projects</a></div>
+                    <div><a href="#socials">socials</a></div>
                 </div>
-
-                <div id="languages">
-                    <h2>programming languages</h2>
-                        <h3 class="language">Python</h3>
-                        <h3 class="language">Java</h3>
-                        <h3 class="language">HTML</h3>
-                        <h3 class="language">CSS</h3>
-                        <h3 class="language">JavaScript</h3>
-                        <h3 class="language">SQL</h3>
-                        <h3 class="language">C#</h3>
-                        <h3 class="language">Bash</h3>
-                        <h3 class="language">Batch</h3>
-                        <h3 class="language">Lua</h3>
-                        <h3 class="language">Scratch</h3>
-                </div>
-
-                <div id="certifications">
-                    <h2>certifications</h2>
-                        <a class="certification" href="certifications/java.pdf">Java</a>
-                        <a class="certification" href="certifications/htmlcss.pdf">HTML & CSS</a>
-
-                </div>
-
-                <div id="projects">
-                    <h2>projects</h2>
-
-                    <div class="project">
-                        <img src="projectlogos/recape.png">
-                        <div class="project-description">
-                            <h3>ReCape</h3>
-                            <p>A service that allows you to have custom capes and 3D models in Minecraft with OptiFine.</p>
-                            <div class="project-links">
-                                <a href="https://recape.boyne.dev">website</a>
-                                <a href="https://github.com/ReCape">github</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <img src="projectlogos/spryg.png">
-                        <div class="project-description">
-                            <h3>Spryg</h3>
-                            <p>This is a Python library for the HackClub Sprig that allows you to interface with the hardware using Python.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/DedFishy/Spryg">github</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <img src="projectlogos/godpresenter.png">
-                        <div class="project-description">
-                            <h3>GodPresenter</h3>
-                            <p>A work-in-progress rip-off of ProPresenter for use as a free alternative with a smaller but more focused and friendly feature set.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/DedFishy/GodPresenter">github</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <img src="projectlogos/bismuth.png">
-                        <div class="project-description">
-                            <h3>Bismuth</h3>
-                            <p>A computer desktop that runs in your browser.</p>
-                            <div class="project-links">
-                                <a href="https://bismuth.boyne.dev/">open</a>
-                                <a href="https://replit.com/@Boyney/bismuthOS">replit</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project">
-                        <img src="projectlogos/q.png">
-                        <div class="project-description">
-                            <h3>q</h3>
-                            <p>A Simon-Bop It combination.</p>
-                            <div class="project-links">
-                                <a href="https://codepen.io/SuperBoyne/full/OJBEjPP">open</a>
-                                <a href="https://codepen.io/SuperBoyne/pen/OJBEjPP">codepen</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <img src="projectlogos/daus.png">
-                        <div class="project-description">
-                            <h3>DAUS</h3>
-                            <p>A recreation of MS-DOS.</p>
-                            <div class="project-links">
-                                <a href="https://daus.pythonpower312.repl.co">open</a>
-                                <a href="https://replit.com/@PythonPower312/DAUS">replit</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <div class="project-description">
-                            <h3>chat.boyne.dev</h3>
-                            <p>A Python-powered online chat room (currently the domain doesn't work right because replit is bullying me).</p>
-                            <div class="project-links">
-                                <a href="https://chatboynedev.boyney.repl.co">open</a>
-                                <a href="https://replit.com/@Boyney/chatboynedev">replit</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <img src="projectlogos/songs.jpg">
-                        <div class="project-description">
-                            <h3>Songs</h3>
-                            <p>A bunch of really weird songs I wrote a while back.</p>
-                            <div class="project-links">
-                                <a href="https://drive.google.com/drive/folders/1v9pNnJ4-xpVzPG2qzXCovDjPXznkRdET?usp=sharing">open</a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
             </div>
+
+            <h2 id="scroll-hint">or, just scroll...</h2>
 
         </div>
 
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <div class="text-section" id="about-me">
+            <h1>About Me</h1>
+            <p>I'm Boyne (aka DedFishy), a high school sophomore from the United States. I enjoy programming, playing video games, biking, driving, hiking, cliff jumping, 
+            retro game collecting, and probably some other stuff that I forgot.
+            </p>
 
-        <script type="text/javascript">
-            function copySocial(event, text) {
-                let target = event.querySelector(".social-text");
-                oldText = target.innerText;
-                navigator.clipboard.writeText(text); 
-                target.innerText = "copied!"
-                setTimeout(e => {
-                    target.innerText = oldText;
-                }, 1000);
-            }
+            <div class="stat-grid">
 
-            function openSocial(link) {
-                window.location = "https://" + link;
-            }
-        </script>
+                <div class="stat">
+                    <h2>Favorite Games</h2>
+
+                    <h3>Lethal Company</h3>
+                    <h3>Minecraft</h3>
+                    <h3>Mario Kart 8 Deluxe</h3>
+                    <h3>Super Mario Bros. Wonder</h3>
+                </div>
+
+                <div class="stat">
+                    <h2>Cool Places Visited</h2>
+
+                    <h3><em>Inside of US</em></h3>
+                    <h3>Yellowstone National Park</h3>
+                    <h3>Grand Canyon</h3>
+                    <h3><em>Outside of US</em></h3>
+                    <h3>Cozumel, Mexico</h3>
+                    <h3>Puerto Costa Maya, Mexico</h3>
+                    <h3>Belize City, Belize</h3>
+                    <h3>Roatan, Honduras</h3>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="text-section" id="skills">
+            <h1>Skills</h1>
+            <div class="stat-grid">
+                <div class="stat">
+                    <h2>Programming Languages, etc.</h2>
+
+                    <h3>Python</h3>
+                    <h3>Java</h3>
+                    <h3>C#</h3>
+                    <h3>Visual Basic</h3>
+                    <h3>SQL</h3>
+                    <h3>JavaScript</h3>
+                    <h3>Lua</h3>
+                    <h3>CSS</h3>
+                    <h3>HTML</h3>
+                    <h3>XML</h3>
+
+                </div>
+
+                <div class="stat">
+                    <h2>Certifications</h2>
+
+                    <h3><a href="/certifications/python.pdf">Python</a></h3>
+                    <h3><a href="/certifications/java.pdf">Java</a></h3>
+                    <h3><a href="/certifications/htmlcss.pdf">HTML+CSS</a></h3>
+                    <h3><a href="/certifications/introtocybersecurity.pdf">Introduction to Cybersecurity</a></h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-section" id="projects">
+            <h1>Projects</h1>
+            <div class="stat-grid">
+
+                <div class="stat project">
+                    <h2>ReCape</h2>
+                    <img src="/projectlogos/recape.png">
+                    <p>A Minecraft customization service that allows OptiFine users to have custom capes and 3d models attached to their characer. <br>
+                        This project has been abandoned, as it has had little popularity.
+                    </p>
+                    <a href="https://github.com/ReCape">GitHub</a>
+                </div>
+
+                <div class="stat project">
+                    <h2>Spryg</h2>
+                    <img src="/projectlogos/spryg.png">
+                    <p>A library for the <a href="https://sprig.hackclub.com/">Sprig</a> game console that allows you to write software in MicroPython that can interface with the Sprig hardware.
+                    </p>
+                    <a href="https://github.com/DedFishy/Spryg">GitHub</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="text-section" id="socials">
+            <h1>Socials</h1>
+            <div class="social-box">
+                <a class="social" href="https://github.com/DedFishy">GitHub</a>
+                <a class="social" href="https://solo.to/boyne">solo.to</a>
+                <a class="social" href="https://replit.com/@Boyney">replit</a>
+                <a class="social" href="https://open.spotify.com/user/j22nobeoowyht006ugwanuf13">Spotify</a>
+                <a class="social" href="https://youtube.com/channel/UCzrgV3QwTdwxzYmQHDjI9PQ">YouTube</a>
+                <a class="social" href="https://twitch.tv/d3df1shy">Twitch</a>
+                <a class="social" href="https://scratch.mit.edu/users/B-Game-Studios/">Scratch</a>
+                <a class="social" href="https://codepen.io/SuperBoyne">Codepen</a>
+                <a class="social" href="mailto:boyngregg@gmail.com">Email</a>
+                <div class="social">Discord: dedfishy</div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <h3>boyne.dev 2021-2024</h3>
+            <h6>I'll probably make it better someday</h6>
+            <a href="https://drive.google.com/drive/folders/1v9pNnJ4-xpVzPG2qzXCovDjPXznkRdET?usp=sharing">🎵</a>
+        </div>
 
     </body>
-
 </html>
