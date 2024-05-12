@@ -187,6 +187,7 @@ h1 em {
     text-align: center;
     justify-content: center;
     align-items: center;
+    flex-grow: 1;
 }
 
 .project img {
@@ -213,4 +214,26 @@ a {
 /* F O O T */
 #foot {
     text-align: center;
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        font-size: 4vw;
+    }
+    .flex-hr {
+        display: none;
+    }
+    #socials {
+        flex-wrap: wrap;
+    }
+    #header-title {
+        font-size: 10vw;
+    }
+    h1 {
+        font-size: 8vw;
+    }
+    .project img {
+        display: none;
+    }
+    
 }
