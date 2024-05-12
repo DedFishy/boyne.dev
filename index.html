@@ -1,138 +1,158 @@
 <!DOCTYPE html>
 <html>
+
     <head>
+
         <title>boyne.dev</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+        <link rel="stylesheet" href="/var.css">
         <link rel="stylesheet" href="/style.css">
+
     </head>
+
     <body>
 
-        <div class="page-height">
+        <div id="notification">
+            ???
+        </div>
 
-            <h1 id="top">boyne.dev</h1>
-
-            <div id="top-modal">
-                
-                <div id="sideways-links">
-                    <div><a href="#about-me">about me</a></div>
-                    <div><a href="#skills">skills</a></div>
-                    <div><a href="#projects">projects</a></div>
-                    <div><a href="#socials">socials</a></div>
+        <div id="header">
+            <div id="header-title">boyne.dev</div>
+            <div id="header-quote">what's cookin?</div>
+            
+            <div id="socials-container">
+                <div class="flex-hr"></div>
+                <div id="socials">
+                    <ion-icon name="logo-discord" social="dedfishy"></ion-icon>
+                    <ion-icon name="logo-github" social="https://github.com/DedFishy"></ion-icon>
+                    <ion-icon name="link-outline" social="https://solo.to/boyne"></ion-icon>
+                    <ion-icon name="radio-outline" social="https://open.spotify.com/user/j22nobeoowyht006ugwanuf13"></ion-icon>
+                    <ion-icon name="logo-youtube" social="https://youtube.com/channel/UCzrgV3QwTdwxzYmQHDjI9PQ"></ion-icon>
+                    <ion-icon name="logo-twitch" social="https://twitch.tv/d3df1shy"></ion-icon>
+                    <ion-icon name="logo-octocat" social="https://scratch.mit.edu/users/B-Game-Studios/"></ion-icon>
+                    <ion-icon name="logo-codepen" social="https://codepen.io/SuperBoyne"></ion-icon>
+                    <ion-icon name="aperture-outline" social="https://replit.com/@Boyney"></ion-icon>
+                    <ion-icon name="mail-outline" social="boyngregg@gmail.com"></ion-icon>
                 </div>
+                <div class="flex-hr"></div>
             </div>
-
-            <h2 id="scroll-hint">or, just scroll...</h2>
 
         </div>
 
-        <div class="text-section" id="about-me">
-            <h1>About Me</h1>
-            <p>I'm Boyne (aka DedFishy), a high school sophomore from the United States. I enjoy programming, playing video games, biking, driving, hiking, cliff jumping, 
-            retro game collecting, and probably some other stuff that I forgot.
-            </p>
+        <div id="widgets">
 
-            <div class="stat-grid">
-
-                <div class="stat">
-                    <h2>Favorite Games</h2>
-
-                    <h3>Lethal Company</h3>
-                    <h3>Minecraft</h3>
-                    <h3>Mario Kart 8 Deluxe</h3>
-                    <h3>Super Mario Bros. Wonder</h3>
-                </div>
-
-                <div class="stat">
-                    <h2>Cool Places Visited</h2>
-
-                    <h3><em>Inside of US</em></h3>
-                    <h3>Yellowstone National Park</h3>
-                    <h3>Grand Canyon</h3>
-                    <h3><em>Outside of US</em></h3>
-                    <h3>Cozumel, Mexico</h3>
-                    <h3>Puerto Costa Maya, Mexico</h3>
-                    <h3>Belize City, Belize</h3>
-                    <h3>Roatan, Honduras</h3>
-                </div>
-
+            <div id="about" class="widget">
+                <h1>About Me</h1>
+                <p>I'm Boyne (aka DedFishy), a high school sophomore from the United States. I enjoy programming, playing video games, biking, driving, hiking, cliff jumping, retro game collecting, and probably some other stuff that I forgot. </p>
+                <p>I enjoy playing Lethal Company, Helldivers II, Minecraft, Mario Kart 8 Deluxe, and Super Mario Bros. Wonder.</p>
+                <p>The coolest places I've visited are Yellowstone National Park, the Grand Canyon, Cozumel, Puerto Costa Maya, Belize City, and Roatan.</p>
+                <p>I've been in FIRST robotics since middle school. I'm an alumni of FTC 10062, a mentor of FTC 10062 and FTC 15726, and a current member of FRC 7826.</p>
+                <p>I'm a member of <a href="https://hackclub.com/">HackClub</a> and attended <a href="https://wonderland.hackclub.com/">Wonderland</a>.</p>
+                <p>I'm a Protestant Christian and help my church with sermon uploading and distribution with a custom podcast integration system.</p>
+                <p>Thanks for paying my page a visit!</p>
             </div>
-        </div>
 
-        <div class="text-section" id="skills">
-            <h1>Skills</h1>
-            <div class="stat-grid">
-                <div class="stat">
-                    <h2>Programming Languages, etc.</h2>
-
-                    <h3>Python</h3>
-                    <h3>Java</h3>
-                    <h3>C#</h3>
-                    <h3>Visual Basic</h3>
-                    <h3>SQL</h3>
-                    <h3>JavaScript</h3>
-                    <h3>Lua</h3>
-                    <h3>CSS</h3>
-                    <h3>HTML</h3>
-                    <h3>XML</h3>
-
-                </div>
-
-                <div class="stat">
-                    <h2>Certifications</h2>
-
-                    <h3><a href="/certifications/python.pdf">Python</a></h3>
-                    <h3><a href="/certifications/java.pdf">Java</a></h3>
-                    <h3><a href="/certifications/htmlcss.pdf">HTML+CSS</a></h3>
-                    <h3><a href="/certifications/introtocybersecurity.pdf">Introduction to Cybersecurity</a></h3>
+            <div id="online-status" class="widget">
+                <img id="online-status-image" src="/img/logo.jpg">
+                <div id="online-status-description">
+                    <div id="online-status-header">loading...</div>
+                    <div id="online-status-subheader"></div>
+                    <div id="online-status-state"></div>
+                    <div id="online-status-details"></div>
                 </div>
             </div>
-        </div>
 
-        <div class="text-section" id="projects">
+            <div id="clock" class="widget">
+                <div id="clock-time">--:-- --</div>
+            </div>
+
+            <div id="specs" class="widget">
+                <h1>Specs</h1>
+                <ul>
+                    <li><strong>OS</strong>: Windows 11 Pro / Atlas OS</li>
+                    <li><strong>CPU</strong>: Intel i5-10600K</li>
+                    <li><strong>GPU</strong>: NVIDIA RTX 3060 Ti</li>
+                    <li><strong>RAM</strong>: 32GB 2133MHz DDR4</li>
+                    <li><strong>MOTHERBOARD</strong>: MSI Z490A-PRO</li>
+                    <li><strong>BOOT DISK</strong>: SAMSUNG 512GB M.2</li>
+                </ul>
+            </div>
+
+            <div id="languages" class="widget">
+                <h1>Programming<br>Languages <em>(etc.)</em></h1>
+                <ul>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>C#</li>
+                    <li>Visual Basic</li>
+                    <li>SQL</li>
+                    <li>JavaScript</li>
+                    <li>Lua</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>XML</li>
+                </ul>
+            </div>
+
+            <div id="certs" class="widget">
+                <h1>Certifications</h1>
+                <ul id="certifications">
+                    <li cert="htmlcss.pdf">HTML and CSS</li>
+                    <li cert="introtocybersecurity.pdf">Introduction to Cybersecurity</li>
+                    <li cert="java.pdf">Java</li>
+                    <li cert="python.pdf">Python</li>
+                </ul>
+            </div>
+
             <h1>Projects</h1>
-            <div class="stat-grid">
 
-                <div class="stat project">
-                    <h2>ReCape</h2>
-                    <img src="/projectlogos/recape.png">
-                    <p>A Minecraft customization service that allows OptiFine users to have custom capes and 3d models attached to their characer. <br>
-                        This project has been abandoned, as it has had little popularity.
-                    </p>
-                    <a href="https://github.com/ReCape">GitHub</a>
+            <div id="g3d" class="project widget">
+                <img src="/img/g3d.png">
+                <div>
+                    <h1>Gregg 3D Printing</h1>
+                    <h2>My 3D printing business based in the Upper Peninsula of Michigan</h2>
+                    <div>
+                        <a href="https://gregg3d.boyne.dev">Visit</a>
+                    </div>
                 </div>
+            </div>
 
-                <div class="stat project">
-                    <h2>Spryg</h2>
-                    <img src="/projectlogos/spryg.png">
-                    <p>A library for the <a href="https://sprig.hackclub.com/">Sprig</a> game console that allows you to write software in MicroPython that can interface with the Sprig hardware.
-                    </p>
-                    <a href="https://github.com/DedFishy/Spryg">GitHub</a>
+            <div id="spryg" class="project widget">
+                <img src="/img/spryg.png">
+                <div>
+                    <h1>Spryg</h1>
+                    <h2>A library for the <a href="https://sprig.hackclub.com/">Sprig</a> game console that allows you to write software in MicroPython that can interface with the Sprig hardware. </h2>
+                    <div>
+                        <a href="https://github.com/DedFishy/Spryg">GitHub</a>
+                    </div>
                 </div>
-
             </div>
-        </div>
 
-        <div class="text-section" id="socials">
-            <h1>Socials</h1>
-            <div class="social-box">
-                <a class="social" href="https://github.com/DedFishy">GitHub</a>
-                <a class="social" href="https://solo.to/boyne">solo.to</a>
-                <a class="social" href="https://replit.com/@Boyney">replit</a>
-                <a class="social" href="https://open.spotify.com/user/j22nobeoowyht006ugwanuf13">Spotify</a>
-                <a class="social" href="https://youtube.com/channel/UCzrgV3QwTdwxzYmQHDjI9PQ">YouTube</a>
-                <a class="social" href="https://twitch.tv/d3df1shy">Twitch</a>
-                <a class="social" href="https://scratch.mit.edu/users/B-Game-Studios/">Scratch</a>
-                <a class="social" href="https://codepen.io/SuperBoyne">Codepen</a>
-                <a class="social" href="mailto:boyngregg@gmail.com">Email</a>
-                <div class="social">Discord: dedfishy</div>
+            <div id="recape" class="project widget">
+                <img src="/img/recape.png">
+                <div>
+                    <h1>ReCape</h1>
+                    <h2>(Archived) A Minecraft customization service that allows OptiFine users to have custom capes and 3d models attached to their characer.</h2>
+                    <div>
+                        <a href="https://github.com/ReCape">GitHub</a>
+                    </div>
+                </div>
             </div>
+
         </div>
 
-        <div id="footer">
-            <h3>boyne.dev 2021-2024</h3>
-            <h6>I'll probably make it better someday</h6>
-            <a href="https://drive.google.com/drive/folders/1v9pNnJ4-xpVzPG2qzXCovDjPXznkRdET?usp=sharing">🎵</a>
-        </div>
+        <p id="foot">boyne.dev 2021-2024 <a href="https://ia800605.us.archive.org/8/items/NeverGonnaGiveYouUp/jocofullinterview41.mp3">👌</a></p>
+
+        <script type="text/javascript" src="/lanyard.js"></script>
+        <script type="text/javascript" src="/socials.js"></script>
+        <script type="text/javascript" src="/certifications.js"></script>
+        <script type="text/javascript" src="/time.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     </body>
+
 </html>
