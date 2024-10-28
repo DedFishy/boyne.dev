@@ -54,6 +54,17 @@
                 <div class="lanyard-fallback">
                     unavailable
                 </div>
+
+                <div id="mobile-dropdown" onclick="
+                var sidebar = document.getElementById('sidebar-scroll');
+                if (sidebar.style.height == '0px' || sidebar.style.height == '') {
+                    sidebar.style.height = '80vh';
+                } else {
+                    sidebar.style.height = '0px';
+                }
+                " >
+                    About Me...
+                </div>
             </div>
 
             <div id="sidebar-scroll">

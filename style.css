@@ -11,6 +11,48 @@ body {
     --header-height: 50px;
 }
 
+@media screen and (max-width: 750px) {
+    body {
+        flex-direction: column;
+    }
+    body #sidebar {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        height: min-content
+    }
+    body #sidebar #online-status {
+        display: inline;
+        width: auto;
+        text-align: right;
+        flex-grow: 1;
+    }
+    body #sidebar #sidebar-scroll {
+        width: 100vw;
+        height: 0;
+        transition: 0.2s;
+    }
+    body #sidebar #mobile-dropdown {
+        display: block;
+    }
+
+    .grid .grid-element {
+        width: 40vw;
+        margin: 5px;
+        flex-grow: 1;
+        box-sizing: border-box;
+    }
+    #sections {
+        padding-left: 0 !important;
+    }
+  }
+
+#mobile-dropdown {
+    display: none;
+    text-decoration: underline;
+}
 #sidebar {
     height: 100%;
     width: min-content;
