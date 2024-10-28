@@ -1,4 +1,4 @@
-const LANYARD_ENABLED = false;
+const LANYARD_ENABLED = true;//false;
 
 const lanyard_url = "https://api.lanyard.rest/v1/users/645264167623983124";
 
