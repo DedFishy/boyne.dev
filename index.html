@@ -4,168 +4,192 @@
     <head>
 
         <title>boyne.dev</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-
-        <link rel="stylesheet" href="/var.css">
-        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="vars.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="lanyard.css">
 
     </head>
 
     <body>
 
-        <div id="notification">
-            ???
-        </div>
+        <div id="sidebar">
 
-        <div id="header">
-            <div id="header-title">boyne.dev</div>
-            <div id="header-quote">what's cookin?</div>
+            <div id="header">
+                <img src="/assets/pfp.webp">
+                <h1>boyne.dev</h1>
+                
+            </div>
+
+            <div id="online-status" class="none">
+
+                Boyne is
+
+                <div id="lanyard-online" class="lanyard-status">
+                    online
+                </div>
+
+                <div id="lanyard-idle" class="lanyard-status">
+                    idle
+                </div>
+
+                <div id="lanyard-dnd" class="lanyard-status">
+                    busy
+                </div>
+
+                <div id="lanyard-offline" class="lanyard-status">
+                    away
+                </div>
+
+                <div id="lanyard-activity" class="lanyard-status">
+                    running <div id="lanyard-activity-name">...</div>
+                </div>
+
+                <div id="lanyard-music" class="lanyard-status">
+                    listening to
+                    <div id="lanyard-track-name">...</div>
+                </div>
+
+                <div class="lanyard-fallback">
+                    unavailable
+                </div>
+            </div>
+
+            <div id="sidebar-scroll">
+
+                <p>I'm Boyne, a highschooler, software developer, and Christian from the United States.</p>
+
+                
+                <div class="sidebar-list">
+                    <h3>Certifications</h3>
+                    <a href="/certifications/htmlcss.pdf">IT Specialist HTML and CSS</a>
+                    <a href="/certifications/python.pdf">IT Specialist Python</a>
+                    <a href="/certifications/java.pdf">IT Specialist Java</a>
+                    <a href="/certifications/introtocybersecurity.pdf">Cisco Introduction to Cybersecurity</a>
+                    <a href="/certifications/ndg.pdf">Cisco NDG Linux Unhatched</a>
+                    <a href="/certifications/networkingbasics.pdf">Cisco Networking Basics</a>
+                    <a href="/certifications/python-essentials.pdf">Cisco Python Essentials</a>
+                    
+                </div>
+
+                <div class="sidebar-list">
+                    <h3>Accounts</h3>
+                    <a href="https://github.com/DedFishy">GitHub</a>
+                    <a href="https://open.spotify.com/user/j22nobeoowyht006ugwanuf13">Spotify</a>
+                    <a href="https://solo.to/boyne">solo.to</a>
+                    <a href="https://www.youtube.com/@bigboyne">YouTube</a>
+                    <a href="https://www.twitch.tv/d3df1shy">Twitch</a>
+                    <a href="https://scratch.mit.edu/users/B-Game-Studios/">Scratch</a>
+                    <a href="https://codepen.io/SuperBoyne">CodePen</a>
+                    <a href="https://replit.com/@Boyney">replit</a>
+                </div>
+
+                <div class="sidebar-list">
+                    <h3>Contact</h3>
+                    <a href="dedfishy" onclick="copyHREF(event)">Discord</a>
+                    <a href="boynegregg@gmail.com" onclick="copyHREF(event)">Email</a>
+                </div>
             
-            <div id="socials-container">
-                <div class="flex-hr"></div>
-                <div id="socials">
-                    <ion-icon name="logo-discord" social="dedfishy"></ion-icon>
-                    <ion-icon name="logo-github" social="https://github.com/DedFishy"></ion-icon>
-                    <ion-icon name="link-outline" social="https://solo.to/boyne"></ion-icon>
-                    <ion-icon name="radio-outline" social="https://open.spotify.com/user/j22nobeoowyht006ugwanuf13"></ion-icon>
-                    <ion-icon name="logo-youtube" social="https://youtube.com/channel/UCzrgV3QwTdwxzYmQHDjI9PQ"></ion-icon>
-                    <ion-icon name="logo-twitch" social="https://twitch.tv/d3df1shy"></ion-icon>
-                    <ion-icon name="logo-octocat" social="https://scratch.mit.edu/users/B-Game-Studios/"></ion-icon>
-                    <ion-icon name="logo-codepen" social="https://codepen.io/SuperBoyne"></ion-icon>
-                    <ion-icon name="aperture-outline" social="https://replit.com/@Boyney"></ion-icon>
-                    <ion-icon name="mail-outline" social="boyngregg@gmail.com"></ion-icon>
-                </div>
-                <div class="flex-hr"></div>
             </div>
-
         </div>
 
-        <div id="widgets">
+        <div id="sections">
 
-            <div id="about" class="widget">
-                <h1>About Me</h1>
-                <p>I'm Boyne (aka DedFishy), a high school sophomore from the United States. I enjoy programming, playing video games, biking, driving, hiking, cliff jumping, retro game collecting, and probably some other stuff that I forgot. </p>
-                <p>I enjoy playing Lethal Company, Helldivers II, Minecraft, Mario Kart 8 Deluxe, and Super Mario Bros. Wonder.</p>
-                <p>The coolest places I've visited are Yellowstone National Park, the Grand Canyon, Cozumel, Puerto Costa Maya, Belize City, and Roatan.</p>
-                <p>I've been in FIRST robotics since middle school. I'm an alumni of FTC 10062, a mentor of FTC 10062 and FTC 15726, and a current member of FRC 7826.</p>
-                <p>I'm a member of <a href="https://hackclub.com/">HackClub</a> and attended <a href="https://wonderland.hackclub.com/">Wonderland</a>.</p>
-                <p>I'm a Protestant Christian and help my church with sermon uploading and distribution with a custom podcast integration system.</p>
-                <p>Thanks for paying my page a visit!</p>
-            </div>
+            <div id="projects" class="section">
+                <h1>Projects</h1>
+                <div class="grid">
 
-            <div id="online-status" class="widget">
-                <img id="online-status-image" src="/img/logo.jpg">
-                <div id="online-status-description">
-                    <div id="online-status-header">loading...</div>
-                    <div id="online-status-subheader"></div>
-                    <div id="online-status-state"></div>
-                    <div id="online-status-details"></div>
+                    <div class="grid-element">
+                        <img src="/assets/projects/thumbnails/progressbar95.png">
+                        <div class="grid-element-text">
+                            <h2>Progressbar95 Real Edition</h2>
+                            <p>A copy of Progressbar95 that runs in your browser.</p>
+                            
+                        </div>
+                        <div class="links">
+                            <a href="https://github.com/DedFishy/Progressbar95">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="grid-element">
+                        <img src="/assets/projects/thumbnails/spryg.png">
+                        <div class="grid-element-text">
+                            <h2>Spryg</h2>
+                            <p>A library for the Sprig game console to write games in MicroPython.</p>
+                            
+                        </div>
+                        <div class="links">
+                            <a href="https://github.com/DedFishy/Spryg">GitHub</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <div id="clock" class="widget">
-                <div id="clock-time">--:-- --</div>
-            </div>
+            <div id="specs" class="section">
+                <h1>Computer Specs</h1>
+                <div class="grid">
 
-            <div id="specs" class="widget">
-                <h1>Specs</h1>
-                <ul>
-                    <li><strong>OS</strong>: Windows 11 Pro / Atlas OS</li>
-                    <li><strong>CPU</strong>: Intel i5-10600K</li>
-                    <li><strong>GPU</strong>: NVIDIA RTX 3060 Ti</li>
-                    <li><strong>RAM</strong>: 32GB 2133MHz DDR4</li>
-                    <li><strong>MOTHERBOARD</strong>: MSI Z490A-PRO</li>
-                    <li><strong>BOOT DISK</strong>: SAMSUNG 512GB M.2</li>
-                </ul>
-            </div>
-
-            <div id="languages" class="widget">
-                <h1>Programming<br>Languages <em>(etc.)</em></h1>
-                <ul>
-                    <li>Python</li>
-                    <li>Java</li>
-                    <li>C#</li>
-                    <li>Visual Basic</li>
-                    <li>SQL</li>
-                    <li>JavaScript</li>
-                    <li>Lua</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>XML</li>
-                </ul>
-            </div>
-
-            <div id="certs" class="widget">
-                <h1>Certifications</h1>
-                <ul id="certifications">
-                    <li cert="htmlcss.pdf">HTML and CSS</li>
-                    <li cert="introtocybersecurity.pdf">Introduction to Cybersecurity</li>
-                    <li cert="java.pdf">Java</li>
-                    <li cert="python.pdf">Python</li>
-                    <li cert="python-essentials.pdf">Python Essentials</li>
-                    <li cert="networkingbasics.pdf">Networking Basics</li>
-                    <li cert="ndg.pdf">NDG Linux Unhatched</li>
-                </ul>
-            </div>
-
-            <h1 style="width: 100%;">Projects</h1>
-            
-            <div id="dimensionalsystems" class="project widget">
-                <div>
-                    <h1>Dimensional Systems</h1>
-                    <h2>I don't like name.com</h2>
-                    <div>
-                        <a href="https://dimensional.systems">Visit</a>
-                        <a href="https://github.com/DedFishy/dimensionalsystems">GitHub</a>
+                    <div class="grid-element">
+                        <img src="/assets/specs/mint.svg">
+                        <div class="grid-element-text">
+                            <h2>Linux Mint</h2>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div id="g3d" class="project widget">
-                <img src="/img/g3d.png">
-                <div>
-                    <h1>Gregg 3D Printing</h1>
-                    <h2>My 3D printing business based in the Upper Peninsula of Michigan</h2>
-                    <div>
-                        <a href="https://gregg3d.boyne.dev">Visit</a>
+                    <div class="grid-element">
+                        <img src="/assets/specs/inteli510600k.png">
+                        <div class="grid-element-text">
+                            <h2>i5-10600K</h2>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div id="spryg" class="project widget">
-                <img src="/img/spryg.png">
-                <div>
-                    <h1>Spryg</h1>
-                    <h2>A library for the <a href="https://sprig.hackclub.com/">Sprig</a> game console that allows you to write software in MicroPython that can interface with the Sprig hardware. </h2>
-                    <div>
-                        <a href="https://github.com/DedFishy/Spryg">GitHub</a>
+                    <div class="grid-element">
+                        <img src="/assets/specs/rtx3060ti.png">
+                        <div class="grid-element-text">
+                            <h2>RTX 3060 Ti</h2>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div id="recape" class="project widget">
-                <img src="/img/recape.png">
-                <div>
-                    <h1>ReCape</h1>
-                    <h2>(Archived) A Minecraft customization service that allows OptiFine users to have custom capes and 3d models attached to their characer.</h2>
-                    <div>
-                        <a href="https://github.com/ReCape">GitHub</a>
+                    <div class="grid-element">
+                        <img src="/assets/specs/z490apro.png">
+                        <div class="grid-element-text">
+                            <h2>MSI Z490-A PRO</h2>
+                        </div>
                     </div>
+                    
+                    <div class="grid-element">
+                        <img src="/assets/specs/corsairvengeance.png">
+                        <div class="grid-element-text">
+                            <h2>Corsair Vengeance LPX 32GB</h2>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
         </div>
 
-        <p id="foot">boyne.dev 2021-2024 <a href="https://ia800605.us.archive.org/8/items/NeverGonnaGiveYouUp/jocofullinterview41.mp3">👌</a></p>
-
-        <script type="text/javascript" src="/lanyard.js"></script>
-        <script type="text/javascript" src="/socials.js"></script>
-        <script type="text/javascript" src="/certifications.js"></script>
-        <script type="text/javascript" src="/time.js"></script>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script type="text/javascript" src="lanyard.js"></script>
+        <script type="text/javascript">
+            function copyHREF(evt) {
+                evt.preventDefault();
+                navigator.clipboard.writeText(evt.target.getAttribute('href')).then(() => {
+                    const previousInnerText = evt.target.innerText;
+                    evt.target.innerText = "Copied"
+                    setTimeout(() => {
+                        evt.target.innerText = previousInnerText;
+                    }, 1000)
+                }, () => {
+                    const previousInnerText = evt.target.innerText;
+                    evt.target.innerText = "Couldn't copy"
+                    setTimeout(() => {
+                        evt.target.innerText = previousInnerText;
+                    }, 2000)
+                });
+            }
+        </script>
 
     </body>
 

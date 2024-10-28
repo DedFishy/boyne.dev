@@ -1,0 +1,11 @@
+@font-face {
+    font-family: Rubik;
+    src: url("/assets/rubik.ttf");
+}
+
+:root {
+    --bg-color: #232323;
+    --sidebar-color: #0e0e0e;
+    --fg-color: #ffffff;
+
+}

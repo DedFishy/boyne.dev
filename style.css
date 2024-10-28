@@ -1,239 +1,109 @@
 body {
     background-color: var(--bg-color);
     color: var(--fg-color);
-    font-family: var(--font);
-}
-
-/* Header crap */
-#header {
-    text-align: center;
-}
-#header-title {
-    font-size: 80px;
-    font-variant: small-caps;
-    text-shadow: 0 0 8px var(--fg-color);
-}
-#header-quote {
-    text-shadow: 0 4px 4px black;
-}
-#socials-container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.flex-hr {
-    flex-grow: 1;
-    height: 5px;
-    width: 100%;
-    background-color: black;
-    border-radius: 50px;
-    margin: 20px;
-}
-#socials {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 4px;
-    background-color: black;
-    border-radius: 20px;
-    width: fit-content;
-    margin: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: var(--box-shadow);
-}
-#socials ion-icon {
-    margin: 8px;
-    cursor: pointer;
-    filter: drop-shadow(0 0 1px var(--fg-color));
-    transition: var(--transition);
-    background-color: transparent;
-}
-#socials ion-icon:hover {
-    transform: scale(2);
-    filter: drop-shadow(0 0 1px var(--bg-color));
-}
-
-/* Widget crap */
-#widgets {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: center;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-#widgets .widget {
-    width: fit-content;
-    border-radius: var(--border-radius);
-    border: 2px solid var(--accent);
-    background-color: black;
-    margin: 4px;
-    padding: 4px;
-    text-align: center;
-    box-shadow: var(--box-shadow);
-    flex-grow: 1;
-    transition: var(--transition);
-}
-ul {
-    text-align: left;
-    padding-left: 0;
-    list-style-type: none;
-    text-align: left;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-}
-h1 em {
-    font-size: 0.4em;
-}
-
-
-/* Certification crap */
-#certifications li {
-    cursor: pointer;
-    text-decoration: underline;
-}
-
-/* Online status crap */
-#online-status {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-#online-status-image {
-    height: var(--top-height);
-    border-radius: var(--border-radius);
-    margin: 10px;
-    box-shadow: 0 2px 8px 0 black;
-}
-#online-status-header {
-    font-size: calc(var(--top-height)*0.4);
-}
-#online-status-subheader {
-    font-size: calc(var(--top-height)*0.2);
-}
-
-#online-status-description {
-    font-variant: small-caps;
-}
-
-.online {
-    border: 3px solid var(--online);
-}
-.idle {
-    border: 3px solid var(--idle);
-}
-.dnd {
-    border: 3px solid var(--dnd);
-}
-.offline {
-    border: 3px solid var(--offline);
-}
-
-/* Clock crap */
-#clock {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-#clock-time {
-    font-size: 50px;
-}
-
-/* Notification crap */
-#notification {
-    position: absolute;
-    background-color: black;
-    padding: 8px;
-    font-size: 30px;
-    border-bottom-left-radius: var(--border-radius);
-    border-bottom-right-radius: var(--border-radius);
-    text-align: center;
+    font-family: "Rubik", sans-serif;
     width: 100vw;
+    height: 100vh;
+    padding: 0;
     margin: 0;
-    top: -30px;
-    left: 0;
-    box-sizing: border-box;
-    pointer-events: none;
-    opacity: 0;
-    transition: var(--transition);
-    box-shadow: 0 2px 4px 0 black;
-}
-.showing {
-    opacity: 1 !important;
-    top: 0 !important;
-}
-
-/* Project crap */
-.project {
-    width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+
+    --header-height: 50px;
 }
 
-.project div {
+#sidebar {
+    height: 100%;
+    width: min-content;
+    background-color: var(--sidebar-color);
+    padding: 5px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
+
+    box-shadow: 5px 0 10px 0 rgba(0, 0, 0, 0.568);
+}
+#sidebar-scroll {
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+}
+#header h1 {
+    font-size: var(--header-height);
+    font-weight: 500;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    text-shadow: 0 0 5px white;
+}
+#header img {
+    height: var(--header-height);
+    margin: 5px;
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgb(184, 184, 184);
+}
+
+#sections {
+    flex-grow: 1;
+    padding-left: 16px;
+    overflow-y: scroll;
+}
+
+.section h1 {
     text-align: center;
+}
+
+.grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+}
+.grid-element {
+    width: 250px;
+    box-sizing: border-box;
+    background-color: var(--sidebar-color);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.grid-element img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+.grid-element h2 {
+    margin: 0;
+    height: 2em;
+    display: flex;
+    align-items: end;
+}
+.grid-element-text {
+    padding: 10px;
+    padding-top: 0;
+    margin-top: -30px;
+    box-sizing: border-box;
     flex-grow: 1;
 }
-
-.project img {
-    height: 200px;
-    width: auto;
-}
-
-.project h2 {
-    font-size: 20px;
-    font-weight: normal;
-}
-
-/* Link crap */
-a {
-    color: rgb(69, 69, 255);
-    text-decoration: none;
-}
-
-/* About me crap */
-#about {
-    width: 100% !important;
-}
-
-/* F O O T */
-#foot {
+.grid-element .links {
+    width: 100%;
     text-align: center;
+    margin-bottom: 10px;
+}
+.links a {
+    color: white;
 }
 
-@media screen and (max-width: 450px) {
-    body {
-        font-size: 4vw;
-    }
-    .flex-hr {
-        display: none;
-    }
-    #socials {
-        flex-wrap: wrap;
-    }
-    #header-title {
-        font-size: 10vw;
-    }
-    h1 {
-        font-size: 8vw;
-    }
-    .project img {
-        display: none;
-    }
-    
+#sidebar h3 {
+    margin-bottom: 2px;
+}
+
+.sidebar-list a {
+    display: block;
+    color: white;
 }
