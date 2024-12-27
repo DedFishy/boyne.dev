@@ -1,5 +1,5 @@
 #online-status {
-    display: block;
+    display: inline;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -10,27 +10,27 @@
     display: none;
 }
 
-.online #lanyard-online {
+.online {
     display: inline;
     color: rgb(0, 170, 0);
 }
-.idle #lanyard-idle {
+.idle {
     display: inline;
     color: rgb(255, 217, 0);
 }
-.dnd #lanyard-dnd {
+.dnd {
     display: inline;
     color: rgb(187, 0, 0);
 }
-.offline #lanyard-offline {
+.offline {
     display: inline;
     color: rgb(105, 105, 105);
 }
-.activity #lanyard-activity {
+.activity {
     display: inline;
     color: white;
 }
-.spotify #lanyard-music {
+.spotify {
     display: inline;
     color: white;
 }
@@ -41,6 +41,7 @@
 }
 #lanyard-track-name {
     display: inline;
+
 }
 
 .lanyard-fallback {

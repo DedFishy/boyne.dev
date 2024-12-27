@@ -1,11 +1,19 @@
+* {
+    --fg: white;
+    --fg-deep: rgb(147, 147, 147);
+    --bg: rgb(32, 32, 32);
+    --bg-deep: rgb(11, 11, 11);
+    --shadow: black;
+    --highlight: rgb(255, 255, 0);
+    --close-bg: rgb(70, 0, 0);
+
+    --border-radius: 5px;
+
+    --transition: 0.2s;
+
+}
+
 @font-face {
     font-family: Rubik;
-    src: url("/assets/rubik.ttf");
-}
-
-:root {
-    --bg-color: #232323;
-    --sidebar-color: #0e0e0e;
-    --fg-color: #ffffff;
-
-}
+    src: url(/assets/rubik.ttf);
+  }

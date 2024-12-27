@@ -8,199 +8,148 @@
 
         <link rel="stylesheet" href="vars.css">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="mobile.css">
         <link rel="stylesheet" href="lanyard.css">
-
     </head>
 
     <body>
 
-        <div id="sidebar">
+        <div id="sidebar-left">
+
+            <div class="sidebar-close" onclick="document.body.className = ''">Close</div>
+
+            <h1>Menu</h1>
+
+            <h2>Socials</h2>
+            <ul id="socials">
+                <li><a href="https://github.com/DedFishy">GitHub</a></li>
+                <li><a href="https://open.spotify.com/user/j22nobeoowyht006ugwanuf13">Spotify</a></li>
+                <li><a href="https://solo.to/boyne">solo.to</a></li>
+                <li><a href="https://www.youtube.com/@bigboyne">YouTube</a></li>
+                <li><a href="https://www.twitch.tv/d3df1shy">Twitch</a></li>
+                <li><a href="https://scratch.mit.edu/users/B-Game-Studios/">Scratch</a></li>
+                <li><a href="https://codepen.io/SuperBoyne">CodePen</a></li>
+                <li><a href="https://replit.com/@Boyney">replit</a></li>
+            </ul>
+
+            <h2>Certifications</h2>
+            <ul id="certifications">
+                <li><a href="/certifications/htmlcss.pdf">HTML and CSS</a></li>
+                <li><a href="/certifications/java.pdf">Java</a></li>
+                <li><a href="/certifications/python.pdf">Python</a></li>
+                <li><a href="/certifications/python-essentials.pdf">Python Essentials</a></li>
+                <li><a href="/certifications/networkingbasics.pdf">Networking Basics</a></li>
+                <li><a href="/certifications/ndg.pdf">NDG Linux Unhatched</a></li>
+                <li><a href="/certifications/introtocybersecurity.pdf">Introduction to Cybersecurity</a></li>
+            </ul>
+
+            <h2>Contact</h2>
+            <ul id="contact">
+                <li>Email: boynegregg@gmail.com</li>
+                <li>Discord: dedfishy</li>
+            </ul>
+
+            <hr>
+
+            <h2>PC Specs</h2>
+            <ul id="specs">
+                <li>OS: Dual Boot Fedora & Windows 11</li>
+                <li>CPU: Intel i5-10600K</li>
+                <li>GPU: RTX 3060 Ti</li>
+                <li>RAM: Corsair Vengeance LPX 32GB</li>
+                <li>Motherboard: MSI Z490-A Pro</li>
+            </ul>
+
+        </div>
+
+        <div id="main">
+            <div id="sidebar-header">
+                <div id="sidebar-left-show" onclick="document.body.className = 'sidebar-left'"></div>
+                <div id="sidebar-right-show" onclick="document.body.className = 'sidebar-right'"></div>
+            </div>
 
             <div id="header">
-                <img src="/assets/pfp.webp">
-                <h1>boyne.dev</h1>
-                
-            </div>
-
-            <div id="online-status" class="none">
-
-                Boyne is
-
-                <div id="lanyard-online" class="lanyard-status">
-                    online
+                <div id="cube-container">
+                    <div id="cube" title="Boyne Cube">
+                        <div class="face" id="top"></div>
+                        <div class="face" id="bottom"></div>
+                        <div class="face" id="left"></div>
+                        <div class="face" id="right"></div>
+                        <div class="face" id="front"></div>
+                        <div class="face" id="back"></div>
+                        
+                    </div>
                 </div>
 
-                <div id="lanyard-idle" class="lanyard-status">
-                    idle
-                </div>
-
-                <div id="lanyard-dnd" class="lanyard-status">
-                    busy
-                </div>
-
-                <div id="lanyard-offline" class="lanyard-status">
-                    away
-                </div>
-
-                <div id="lanyard-activity" class="lanyard-status">
-                    running <div id="lanyard-activity-name">...</div>
-                </div>
-
-                <div id="lanyard-music" class="lanyard-status">
-                    listening to
-                    <div id="lanyard-track-name">...</div>
-                </div>
-
-                <div class="lanyard-fallback">
-                    unavailable
-                </div>
-
-                <div id="mobile-dropdown" onclick="
-                var sidebar = document.getElementById('sidebar-scroll');
-                if (sidebar.style.height == '0px' || sidebar.style.height == '') {
-                    sidebar.style.height = '80vh';
-                } else {
-                    sidebar.style.height = '0px';
-                }
-                " >
-                    About Me...
+                <div id="title">
+                    <h1>boyne.dev</h1>
+                    <h2>Boyne is <span id="online-status">loading</span> <span id="lanyard-activity-name"></span></h2>
                 </div>
             </div>
 
-            <div id="sidebar-scroll">
-
-                <p>I'm Boyne, a highschooler, software developer, and Christian from the United States.</p>
-
-                
-                <div class="sidebar-list">
-                    <h3>Certifications</h3>
-                    <a href="/certifications/htmlcss.pdf">IT Specialist HTML and CSS</a>
-                    <a href="/certifications/python.pdf">IT Specialist Python</a>
-                    <a href="/certifications/java.pdf">IT Specialist Java</a>
-                    <a href="/certifications/introtocybersecurity.pdf">Cisco Introduction to Cybersecurity</a>
-                    <a href="/certifications/ndg.pdf">Cisco NDG Linux Unhatched</a>
-                    <a href="/certifications/networkingbasics.pdf">Cisco Networking Basics</a>
-                    <a href="/certifications/python-essentials.pdf">Cisco Python Essentials</a>
-                    
-                </div>
-
-                <div class="sidebar-list">
-                    <h3>Accounts</h3>
-                    <a href="https://github.com/DedFishy">GitHub</a>
-                    <a href="https://open.spotify.com/user/j22nobeoowyht006ugwanuf13">Spotify</a>
-                    <a href="https://solo.to/boyne">solo.to</a>
-                    <a href="https://www.youtube.com/@bigboyne">YouTube</a>
-                    <a href="https://www.twitch.tv/d3df1shy">Twitch</a>
-                    <a href="https://scratch.mit.edu/users/B-Game-Studios/">Scratch</a>
-                    <a href="https://codepen.io/SuperBoyne">CodePen</a>
-                    <a href="https://replit.com/@Boyney">replit</a>
-                </div>
-
-                <div class="sidebar-list">
-                    <h3>Contact</h3>
-                    <a href="dedfishy" onclick="copyHREF(event)">Discord</a>
-                    <a href="boynegregg@gmail.com" onclick="copyHREF(event)">Email</a>
-                </div>
-            
-            </div>
-        </div>
-
-        <div id="sections">
-
-            <div id="projects" class="section">
-                <h1>Projects</h1>
-                <div class="grid">
-
-                    <div class="grid-element">
-                        <img src="/assets/projects/thumbnails/progressbar95.png">
-                        <div class="grid-element-text">
-                            <h2>Progressbar95 Real Edition</h2>
-                            <p>A copy of Progressbar95 that runs in your browser.</p>
-                            
-                        </div>
-                        <div class="links">
-                            <a href="https://github.com/DedFishy/Progressbar95">GitHub</a>
-                        </div>
-                    </div>
-
-                    <div class="grid-element">
-                        <img src="/assets/projects/thumbnails/spryg.png">
-                        <div class="grid-element-text">
-                            <h2>Spryg</h2>
-                            <p>A library for the Sprig game console to write games in MicroPython.</p>
-                            
-                        </div>
-                        <div class="links">
-                            <a href="https://github.com/DedFishy/Spryg">GitHub</a>
-                        </div>
-                    </div>
-
-                </div>
+            <div id="about-me">
+                Hey, I'm Boyne, a highschooler, software developer, and Christian from the United States.
             </div>
 
-            <div id="specs" class="section">
-                <h1>Computer Specs</h1>
-                <div class="grid">
+            <h1>Projects</h1>
 
-                    <div class="grid-element">
-                        <img src="/assets/specs/mint.svg">
-                        <div class="grid-element-text">
-                            <h2>Linux Mint</h2>
-                        </div>
-                    </div>
+            <div id="projects" class="cards">
 
-                    <div class="grid-element">
-                        <img src="/assets/specs/inteli510600k.png">
-                        <div class="grid-element-text">
-                            <h2>i5-10600K</h2>
-                        </div>
-                    </div>
+                <!-- Progressbar95 Real Edition -->
+                <div class="card" style="background-image: url(/assets/projects/thumbnails/progressbar95.png);">
 
-                    <div class="grid-element">
-                        <img src="/assets/specs/rtx3060ti.png">
-                        <div class="grid-element-text">
-                            <h2>RTX 3060 Ti</h2>
-                        </div>
-                    </div>
 
-                    <div class="grid-element">
-                        <img src="/assets/specs/z490apro.png">
-                        <div class="grid-element-text">
-                            <h2>MSI Z490-A PRO</h2>
-                        </div>
+                    <div class="card-content">
+                        <h2>Progressbar95 Real Edition</h2>
+                        <p>A copy of Progressbar95 that actually runs on your Windows desktop.</p>
+                        <ul>
+                            <li><a href="https://github.com/DedFishy/Progressbar95">GitHub</a></li>
+                        </ul>
                     </div>
-                    
-                    <div class="grid-element">
-                        <img src="/assets/specs/corsairvengeance.png">
-                        <div class="grid-element-text">
-                            <h2>Corsair Vengeance LPX 32GB</h2>
-                        </div>
-                    </div>
-
                 </div>
+
+                <!-- Spryg -->
+                <div class="card" style="background-image: url(/assets/projects/thumbnails/spryg.png);">
+
+                    <div class="card-content">
+                        <h2>Spryg</h2>
+                        <p>A library for the Sprig game console for writing games using MicroPython.</p>
+                        <ul>
+                            <li><a href="https://github.com/DedFishy/Spryg">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Monster -->
+                <div class="card" style="background-image: url(/assets/projects/thumbnails/monster.webp);">
+
+                    <div class="card-content">
+                        <h2>Monster</h2>
+                        <p>My attempt at reverse engineering the protocol for Monster smart home lights.</p>
+                        <ul>
+                            <li><a href="https://github.com/DedFishy/Monster">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
+
 
         </div>
 
-        <script type="text/javascript" src="lanyard.js"></script>
-        <script type="text/javascript">
-            function copyHREF(evt) {
-                evt.preventDefault();
-                navigator.clipboard.writeText(evt.target.getAttribute('href')).then(() => {
-                    const previousInnerText = evt.target.innerText;
-                    evt.target.innerText = "Copied"
-                    setTimeout(() => {
-                        evt.target.innerText = previousInnerText;
-                    }, 1000)
-                }, () => {
-                    const previousInnerText = evt.target.innerText;
-                    evt.target.innerText = "Couldn't copy"
-                    setTimeout(() => {
-                        evt.target.innerText = previousInnerText;
-                    }, 2000)
-                });
-            }
-        </script>
+        <div id="sidebar-right">
+            <div class="sidebar-close" onclick="document.body.className = ''">Close</div>
+            <h1>Posts</h1>
+            <div id="blog-post-list">
+                <a class="blog-post" href="/blog.html?path=2024%2F12%2F20%2FMy%20blog.md&title=top sigma"><div class="blog-post-title">My blog</div><div class="blog-post-date">Posted on 2024/12/20</div></a>
+            </div>
+            <a id="blog-archive" href="/blog-archive.html">View Archive</a>
+        </div>
+
+        <script src="/blog.js"></script>
+        <script src="/lanyard.js"></script>
+
+
 
     </body>
 

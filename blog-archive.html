@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>blog archive on boyne.dev</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="vars.css">
+        <link rel="stylesheet" href="blog-render.css">
+    </head>
+
+    <body>
+        <div id="header">
+            <a href="/">back to boyne.dev</a>
+
+            <div id="title">Post Archive</div>
+        </div>
+
+        <div id="blog-post-list">
+            <div id="loader">Loading archive...</div>
+        </div>
+
+        <script src="/blog.js"></script>
+
+        <script type="text/javascript">
+            populatePosts(-1);
+        </script>
+
+    </body>
+
+</html>
