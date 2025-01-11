@@ -87,11 +87,6 @@
         overflow-y: scroll;
         
     }
-    #sidebar-left {
-    }
-    #sidebar-right {
-        
-    }
     /* Sidebar Close */
     .sidebar-close {
         display: block;
@@ -113,8 +108,21 @@
         font-size: 1.2em;
     }
 
-    /* Sidebar Cube */
+    /* Cube */
+    @keyframes cube-container-turn {
+        from {transform: rotate(0deg)}
+        to {transform: rotate(360deg)}
+    }
+    @keyframes cube-3d-turn {
+        from { transform: rotate3d(0, 0, 0, 0); }
+        to { transform: rotate3d(1, 1, 0, 360deg); }
 
-
+    }
+    #cube {
+        animation: cube-3d-turn 3s linear infinite;
+    }
+    #cube-container {
+        animation: cube-container-turn 10s linear infinite;
+    }
 
   }

@@ -118,21 +118,20 @@ hr {
 }
 
 /* Cube */
-@keyframes cube-container-turn {
+/*@keyframes cube-container-turn {
     from {transform: rotate(0deg)}
     to {transform: rotate(360deg)}
 }
 @keyframes cube-3d-turn {
     from { transform: rotate3d(0, 0, 0, 0); }
     to { transform: rotate3d(1, 1, 0, 360deg); }
-}
+}*/
 #cube-container {
     perspective: 500px;
     perspective-origin: center;
     width: fit-content;
     height: fit-content;
     filter: drop-shadow(0 0 10px var(--highlight));
-    animation: cube-container-turn 10s linear infinite;
 }
 #cube {
     --face-size: 10vw;
@@ -141,7 +140,7 @@ hr {
     width: var(--face-size);
     height: var(--face-size);
     transform-style: preserve-3d;
-    animation: cube-3d-turn 3s linear infinite;
+    
     padding: var(--face-offset);
     
 }
