@@ -4,6 +4,30 @@
         --sidebar-header-height: 50px;
         --sidebar-button-size: 30px;
     }
+    html {
+        overflow: hidden;
+    }
+    /* Body */
+    body {
+        transform: rotateY(0deg);
+        width: 100vw;
+        transform-style: preserve-3d;
+        transition: 0.2s;
+        
+    }
+    body #main {
+        transform: translateZ(50vw);
+        width: 100vw;
+    }
+    body.sidebar-left {
+        transform: rotateY(90deg);
+        width: 100vw;
+    }
+    body.sidebar-right {
+        transform: rotateY(-90deg);
+        
+        width: 100vw;
+    }
     /* Header */
     #header {
         flex-direction: column;
@@ -11,13 +35,17 @@
     #cube {
         --face-size: 35vw;
     }
-    #title {
-        font-size: 13vw;
+    #title h1 {
+        font-size: 15vw;
+    }
+    #title h2 {
+        font-size: 6vw;
     }
 
     /* Main Content */
     #main {
         padding: 0;
+        background-color: var(--bg);
     }
     /* Sidebar Header */
     #sidebar-header {
@@ -57,19 +85,20 @@
 
     /* Sidebars */
     #sidebar-left, #sidebar-right {
-        width: 0;
+        width: 100vw;
+        height: 100dvh;
         transition: var(--transition);
         min-width: 0;
-
+        position: absolute;
+        overflow-x: hidden;
+        overflow-y: scroll;
     }
-    body.sidebar-left #sidebar-left, body.sidebar-right #sidebar-right {
-        width: 100vw;
-        
+    #sidebar-left {
+        transform: rotateY(-90deg) translateZ(50vw);
     }
-    body.sidebar-left #main, body.sidebar-right #main {
-        width: 0;
+    #sidebar-right {
+        transform: rotateY(90deg) translateZ(50vw);
     }
-
     /* Sidebar Close */
     .sidebar-close {
         display: block;
@@ -85,6 +114,14 @@
         text-align: left;
         margin-left: 20px;
     }
+
+    /* Cards */
+    .card-content h2 {
+        font-size: 1.2em;
+    }
+
+    /* Sidebar Cube */
+
 
 
   }
