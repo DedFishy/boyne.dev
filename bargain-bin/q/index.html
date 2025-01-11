@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>q</title>
+        <style>
+            body {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  background: rgb(9,9,121);
+    background: linear-gradient(133deg, rgba(9,9,121,1) 0%, rgba(0,117,140,1) 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  height: 100vh;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#top-bar {
+  display: flex;
+  width: 100%;
+}
+#game {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 4px;
+  margin: 50px;
+  text-align: center;
+  box-shadow: 8px 8px 0 0 black;
+  border-radius: 4px;
+  transition: 0.1s;
+  border-left: 8px solid red;
+  border-right: 8px solid green;
+  border-top: 8px solid yellow;
+  border-bottom: 8px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+
+#cube {
+  width: 20%;
+  height: 20%;
+  background-color: black;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 3em;
+  transition: 0.1s;
+  box-shadow: 0 0 8px 0 black;
+}
+
+@media (orientation: landscape) {
+  #game {
+      height: 80vh;
+      width: 80vh;
+  }
+}
+
+@media (orientation: portrait) {
+  #game {
+      height: 80vw;
+      width: 80vw;
+  }
+}
+
+#score {
+  position: fixed;
+  top: 4px;
+  left: 4px;
+  font-size: 2em;
+}
+
+#high {
+  position: fixed;
+  top: calc(4px + 1em);
+  left: 4px;
+  font-size: 2em;
+}
+#how-to-play {
+  position: fixed;
+  top: 4px;
+  right: 4px;
+  font-size: 1em;
+  text-align: right;
+  font-weight: bold;
+}
+#how-to-play-tooltip {
+    font-size: 1em;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.2s;
+    font-weight: normal;
+    max-width: 40vw;
+    background-color: black;
+    border-radius: 5px;
+}
+#how-to-play:hover #how-to-play-tooltip {
+    opacity: 1;
+}
+        </style>
+    </head>
+    <body>
+        <div id="game">
+            <div id="cube">
+              q
+            </div>
+          </div>
+          
+          <div id="score">
+            Score: 0
+          </div>
+          <div id="high">
+            High: 0
+          </div>
+
+          <div id="how-to-play">
+            How to play
+            <div id="how-to-play-tooltip">
+                Push the inner "q" cube onto the border of the large cube of the same color.
+                Use the arrow keys or WASD.
+                Every time you get one right, your score increases by the number on the cube, and the number resets.
+                The longer you wait, the more the number decreases, and the longer you play the faster it decreases.
+                When you hit the wrong color or let your timer hit zero, the game ends.
+    
+            </div>
+          </div>
+
+          <script type="text/javascript">
+            var game = document.getElementById("game");
+            var cube = document.getElementById("cube");
+            var scoreCounter = document.getElementById("score");
+            var highCounter = document.getElementById("high");
+
+            if (localStorage.getItem("high") == null) {
+                localStorage.setItem("high", 0);
+            }
+
+            highCounter.innerText = "High: " + localStorage.getItem("high");
+
+            var keys = {
+            38: "up",
+            40: "down",
+            37: "left",
+            39: "right",
+
+            87: "up",
+            83: "down",
+            65: "left",
+            68: "right"
+            }
+
+            var colors = {
+            up: "yellow",
+            down: "blue",
+            left: "red",
+            right: "green"
+            }
+
+            var currentColor = "red";
+
+            var held = {}
+
+            var score = 0;
+            var remainingPoints = -1;
+
+            var pointDecTime = 1000
+
+            Object.keys(keys).forEach(keyCode => {
+                held[keys[keyCode]] = false;
+            });
+
+            document.body.onkeydown = function(e) {
+                var key = e.keyCode;
+                held[keys[key]] = true;
+            }
+
+            document.body.onkeyup = function(e) {
+                var key = e.keyCode;
+                held[keys[key]] = false;
+            }
+
+            function gameOver() {
+            if (score > localStorage.getItem("high")) {
+                localStorage.setItem("high", score);
+            }
+            highCounter.innerText = "High: " + localStorage.getItem("high");
+            
+            score = 0;
+            remainingPoints = -1;
+            cube.innerText = "q";
+            clearInterval(pointDecTime);
+            pointDecTime = 1000;
+            game.style.transform = "";
+            cube.style.opacity = "";
+            }
+
+            var pointDecrementer = setInterval(function(){}, 0);
+
+            function run() {
+            let selectedColor = "wait";
+            document.body.style.filter = "sepia(0)"
+            if (held["up"]) {
+                game.style.marginTop = "0";
+                game.style.alignItems = "start";
+                cube.style.height = "95%";
+                selectedColor = colors.up;
+            }
+            else if (held["down"]) {
+                game.style.marginBottom = "0";
+                game.style.alignItems = "end";
+                cube.style.height = "95%";
+                selectedColor = colors.down;
+
+            }
+            else if (held["left"]) {
+                game.style.marginLeft = "0";
+                game.style.justifyContent = "start";
+                cube.style.width = "95%";    
+                selectedColor = colors.left;
+
+            } 
+            else if (held["right"]) {
+                game.style.marginRight = "0";
+                game.style.justifyContent = "end";
+                cube.style.width = "95%";
+                selectedColor = colors.right;
+
+            } else {
+                game.style.marginRight = "";
+                game.style.marginTop = "";
+                game.style.marginBottom = "";
+                game.style.marginLeft = "";
+                cube.style.width = "";
+                cube.style.height = "";
+                game.style.alignItems = "";
+                game.style.justifyContent = "";
+                selectedColor = "";
+                
+                if (currentColor == "wait") {
+                currentColor = colors[Object.keys(colors)[Math.floor(Math.random() * Object.keys(colors).length)]];
+                }
+            }
+            
+            if (selectedColor == "") {
+                cube.style.backgroundColor = currentColor;
+            }
+            else if (selectedColor == currentColor) {
+                if (currentColor != "wait") {
+                if (remainingPoints != -1) {
+                    score += remainingPoints;
+                }
+                clearInterval(pointDecrementer)
+                pointDecrementer = setInterval(decPoints, pointDecTime)
+                pointDecTime += 10
+                pointDecTime *= 0.9
+                console.log(pointDecTime)
+                
+                game.style.transform = "";
+
+                }
+                currentColor = "wait";
+            } 
+            else if (currentColor != "wait") {
+                cube.style.backgroundColor = "black";
+                document.body.style.filter = "sepia(1)"
+                gameOver();
+            } else {
+                cube.style.backgroundColor = "white";
+                remainingPoints = 10;
+            }
+            
+            scoreCounter.innerText = "Score: " + score;
+            
+            if (remainingPoints >= 0) {
+                cube.style.opacity = remainingPoints/10;
+                cube.innerText = remainingPoints;
+            }
+            
+            window.requestAnimationFrame(run);
+            }
+
+            function decPoints() {
+            if (remainingPoints >= 0){
+                remainingPoints -= 1;
+            } else {
+                gameOver();
+            }
+            }
+
+            window.requestAnimationFrame(run);
+          </script>
+    </body>
+</html>

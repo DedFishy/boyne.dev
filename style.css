@@ -215,3 +215,35 @@ hr {
 .card li {
     display: inline;
 }
+/* Bargain Bin */
+#bargain-bin {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bargain {
+    width: 100%;
+    background-color: var(--bg-deep);
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 0 2px 0 var(--highlight);
+    transition: var(--transition);
+}
+.bargain:hover {
+    box-shadow: 0 0 2px 4px var(--highlight);
+}
+.bargain h2 {
+    margin: 0;
+}
+.bargain p {
+    flex-grow: 1;
+    text-align: right;
+}

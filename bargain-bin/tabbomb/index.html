@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tab Bomb</title>
+        <style>
+            html, body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: sans-serif;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            }
+
+            #links {
+            display: none;
+            }
+
+            button {
+            border: #111111;
+            background-color: white;
+            margin: 4px;
+            border-radius: 6px;
+            box-shadow: 0 0 2px 2px white;
+            transition: 0.1s;
+            }
+
+            button:hover {
+            border: #111111;
+            background-color: white;
+            margin: 4px;
+            border-radius: 6px;
+            box-shadow: 0 0 4px 4px white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>TabBomb</h1>
+        <h2>Remember to allow popus in your browser!</h2>
+        <h2 id="linkcount">There are 0 links</h2>
+        <input placeholder="URL" id="url" value="https://google.com"></input>
+        <button onclick="makeLinks();">Create Links</button>
+        <button onclick="clickLinks();">Activate</button>
+        <div id="links"></div>
+
+        <script type="text/javascript">
+            var linkCount = 0;
+
+            function makeLinks() {
+            for (let i = 0; i < 100; i++) {
+                linkCount++;
+                let link = document.createElement("a");
+
+                link.innerText = "Brace yourself.";
+                link.target = "_blank";
+
+                link.href = document.getElementById("url").value;
+
+                document.getElementById("links").appendChild(link);
+            }
+            
+            document.getElementById("linkcount").innerText = "There are " + linkCount + " links";
+            }
+
+            function clickLinks() {
+            let links = document.getElementsByTagName("a");
+            
+            for (i in links) {
+                links[i].click();
+            }
+            }
+        </script>
+    </body>
+</html>
