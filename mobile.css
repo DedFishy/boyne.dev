@@ -9,18 +9,16 @@
     }
     /* Body */
     body {
-        transform: translateX(-100vw) !important;
-        width: 300vw;
+        width: 100vw;
+        overflow: visible;
         transition: 0.2s;
     }
     body #main {
         width: 100vw;
     }
-    body.sidebar-left {
-        transform: translateX(0) !important;
-    }
-    body.sidebar-right {
-        transform: translateX(-200vw) !important;
+    body.sidebar-left #sidebar-left {
+        opacity: 1;
+        pointer-events: all;
     }
     /* Header */
     #header {
@@ -56,7 +54,7 @@
     }
 
     /* Sidebar Buttons */
-    #sidebar-left-show, #sidebar-right-show {
+    #sidebar-left-show{
         height: var(--sidebar-button-size);
         width: var(--sidebar-button-size);
         box-sizing: border-box;
@@ -70,21 +68,20 @@
         background-size: contain;
         background-repeat: no-repeat;
     }
-    #sidebar-right-show {
-        background-image: url(/assets/icons/blog.svg);
-        background-position: right;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
 
     /* Sidebars */
-    #sidebar-left, #sidebar-right {
+    #sidebar-left {
         width: 100vw;
         height: 100dvh;
         transition: var(--transition);
         min-width: 0;
         overflow-x: hidden;
         overflow-y: scroll;
+        display: block;
+        position: absolute;
+        z-index: 10;
+        opacity: 0;
+        pointer-events: none;
         
     }
     /* Sidebar Close */
